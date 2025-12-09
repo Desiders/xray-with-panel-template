@@ -15,7 +15,3 @@ This directory contains the core Remnawave Panel application, including its data
 ### Subscription
 
 The Subscription service provides a dedicated page for users to manage their subscriptions and easily set up various VPN clients. It is highly customizable to match your branding and client instructions. For more details on its configuration and customization options, see the [Subscription README](./subscription/README.md).
-
-### XRay
-
-This directory holds the XRay configuration template (`config.jsonc`), which is used by the Panel to provision XRay settings to your nodes. This is where the central XRay configuration is managed. For information on customizing and using this template, please refer to the [XRay README](./xray/README.md).

@@ -4,7 +4,7 @@ This directory contains the services that make up the node server component of t
 
 ## XRay Configuration
 
-**Important:** The XRay configuration is NOT managed within this server. It is maintained by panel server.
+**Important:** The XRay configuration populates by panel server.
 
 ## Shared Files
 

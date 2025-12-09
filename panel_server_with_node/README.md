@@ -8,13 +8,4 @@ This setup is designed for users who want to run all components of the Remnawave
 
 ## Documentation
 
-The documentation for each component is symlinked from the original directories (`node_server` and `panel_server`).
-
-- **[Anubis](./anubis/README.md)**
-- **[Nginx](./nginx/README.md)** (Note: This is a combined configuration, see the specific README for details.)
-- **[Remnawave Node](./node/README.md)**
-- **[Remnawave Panel](./panel/README.md)**
-- **[Subscription Page](./subscription/README.md)**
-- **[XRay Configuration](./xray/README.md)**
-
 Please refer to these `README.md` files for detailed information on how to configure each component. The general principles for configuration (e.g., using `.env` files) remain the same as in the separate `node_server` and `panel_server` setups.
