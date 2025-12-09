@@ -1,0 +1,729 @@
+{
+    "config": {
+        "additionalLocales": [
+            "ru"
+        ]
+    },
+    "platforms": {
+        "windows": [
+            {
+                "id": "v2rayn",
+                "name": "v2rayN",
+                "isFeatured": true,
+                "urlScheme": "v2rayn://install-config/?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-windows-64-SelfContained.zip",
+                            "buttonText": {
+                                "en": "Download for Windows",
+                                "ru": "Скачать для Windows"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the application.",
+                        "ru": "Скачайте и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "You can change the language by clicking the three dots in the top right corner.",
+                        "ru": "Язык можно сменить, нажав на три точки в правом верхнем углу."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription (NOT SUPPORTED FOR THIS APPLICATION).",
+                        "ru": "Нажмите кнопку для добавления подписки (НЕ ПОДДЕРЖИВАЕТСЯ ДЛЯ ДАННОГО ПРИЛОЖЕНИЯ)."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In v2rayN, open Configuration → Import Config, then go to Subscription Groups and update them.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В v2rayN откройте Конфигурация → Импортировать конфиг, затем перейдите в Группы подписок и обновите их."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Enable VPN with the Enable TUN button. Turn TUN mode ON and select Clear System Proxy from the list on the right.",
+                        "ru": "Включите VPN кнопкой «Включить TUN». Переключите режим TUN в положение ON и выберите «Отключить системный прокси» в списке справа."
+                    }
+                }
+            },
+            {
+                "id": "hiddify",
+                "name": "Hiddify",
+                "isFeatured": false,
+                "urlScheme": "hiddify://import/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Windows-Setup-x64.exe",
+                            "buttonText": {
+                                "en": "Download for Windows",
+                                "ru": "Скачать для Windows"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the application.",
+                        "ru": "Скачайте и установите приложение."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a different server in the Proxy section if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите другой сервер в разделе «Прокси»."
+                    }
+                }
+            },
+            {
+                "id": "clash-verge",
+                "name": "Clash Verge",
+                "isFeatured": false,
+                "urlScheme": "clash://install-config?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_x64-setup.exe",
+                            "buttonText": {
+                                "en": "Download for Windows",
+                                "ru": "Скачать для Windows"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the application.",
+                        "ru": "Скачайте и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "To change the language, click the gear icon in the left panel, go to Verge 设置 and select 语言设置.",
+                        "ru": "Чтобы сменить язык, нажмите на шестерёнку в левой панели, перейдите в Verge 设置 и выберите 语言设置."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In Clash Verge, go to Profiles, paste the link in the text field, and click Import.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В Clash Verge перейдите в раздел «Профили», вставьте ссылку и нажмите «Импорт»."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Select a server in the Proxy section. Enable VPN in Settings by turning TUN Mode ON.",
+                        "ru": "Выберите сервер в разделе «Прокси». Включите VPN в настройках, переключив TUN Mode в положение «ВКЛ»."
+                    }
+                }
+            }
+        ],
+        "ios": [
+            {
+                "id": "happ",
+                "name": "Happ",
+                "isFeatured": true,
+                "urlScheme": "happ://add/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://apps.apple.com/us/app/happ-proxy-utility/id6504287215",
+                            "buttonText": {
+                                "en": "Open in App Store [EU]",
+                                "ru": "Открыть App Store [EU]"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973",
+                            "buttonText": {
+                                "en": "Open in App Store [RU]",
+                                "ru": "Открыть App Store [RU]"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Install the app from the App Store. When you launch it, tap Allow in the VPN permission dialog and enter your passcode.",
+                        "ru": "Установите приложение из App Store. При запуске нажмите «Разрешить» и введите код-пароль устройства."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button below — the app will open and add your subscription automatically.",
+                        "ru": "Нажмите кнопку ниже — приложение откроется и автоматически добавит подписку."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a server from the list if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите сервер из списка."
+                    }
+                }
+            },
+            {
+                "id": "streisand",
+                "name": "Streisand",
+                "isFeatured": false,
+                "urlScheme": "streisand://import/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://apps.apple.com/ru/app/streisand/id6450534064",
+                            "buttonText": {
+                                "en": "Open in App Store",
+                                "ru": "Открыть App Store"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Install the app from the App Store. When you launch it, tap Allow in the VPN permission dialog and enter your passcode.",
+                        "ru": "Установите приложение из App Store. При запуске нажмите «Разрешить» и введите код-пароль устройства."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button below — the app will open and add your subscription automatically.",
+                        "ru": "Нажмите кнопку ниже — приложение откроется и автоматически добавит подписку."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a server from the list if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите сервер из списка."
+                    }
+                }
+            },
+            {
+                "id": "shadowrocket",
+                "name": "Shadowrocket",
+                "isFeatured": false,
+                "urlScheme": "sub://",
+                "isNeedBase64Encoding": true,
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://apps.apple.com/ru/app/shadowrocket/id932747118",
+                            "buttonText": {
+                                "en": "Open in App Store",
+                                "ru": "Открыть App Store"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Install the app from the App Store. When you launch it, tap Allow in the VPN permission dialog and enter your passcode.",
+                        "ru": "Установите приложение из App Store. При запуске нажмите «Разрешить» и введите код-пароль устройства."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button below — the app will open and add your subscription automatically.",
+                        "ru": "Нажмите кнопку ниже — приложение откроется и автоматически добавит подписку."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a server from the list if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите сервер из списка."
+                    }
+                }
+            }
+        ],
+        "android": [
+            {
+                "id": "nekobox",
+                "name": "Nekobox",
+                "isFeatured": true,
+                "urlScheme": "clash://install-config?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/download/1.4.1/NekoBox-1.4.1-arm64-v8a.apk",
+                            "buttonText": {
+                                "en": "Download APK",
+                                "ru": "Скачать APK"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the APK file.",
+                        "ru": "Скачайте и установите APK-файл."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button to import your configuration.",
+                        "ru": "Нажмите кнопку для импорта конфигурации."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Open the app and tap Connect.",
+                        "ru": "Откройте приложение и нажмите «Подключить»."
+                    }
+                }
+            },
+            {
+                "id": "v2rayng",
+                "name": "v2rayNG",
+                "isFeatured": true,
+                "urlScheme": "v2rayng://install-config/?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayNG/releases/download/1.10.28/v2rayNG_1.10.28_arm64-v8a.apk",
+                            "buttonText": {
+                                "en": "Download APK",
+                                "ru": "Скачать APK"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the APK file.",
+                        "ru": "Скачайте и установите APK-файл."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button to import your configuration.",
+                        "ru": "Нажмите кнопку для импорта конфигурации."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Open the app and tap Connect.",
+                        "ru": "Откройте приложение и нажмите «Подключить»."
+                    }
+                }
+            },
+            {
+                "id": "happ",
+                "name": "Happ",
+                "isFeatured": false,
+                "urlScheme": "happ://add/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://play.google.com/store/apps/details?id=com.happproxy",
+                            "buttonText": {
+                                "en": "Open in Google Play",
+                                "ru": "Открыть Google Play"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://github.com/Happ-proxy/happ-android/releases/latest/download/Happ.apk",
+                            "buttonText": {
+                                "en": "Download APK",
+                                "ru": "Скачать APK"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Install from Google Play or download the APK file directly if Google Play is unavailable.",
+                        "ru": "Установите из Google Play или скачайте APK-файл, если Google Play недоступен."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Open the app and tap Connect.",
+                        "ru": "Откройте приложение и нажмите «Подключить»."
+                    }
+                }
+            },
+            {
+                "id": "clash-meta",
+                "name": "Clash Meta",
+                "isFeatured": false,
+                "urlScheme": "clash://install-config?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.7/cmfa-2.11.7-meta-universal-release.apk",
+                            "buttonText": {
+                                "en": "Download APK",
+                                "ru": "Скачать APK"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://f-droid.org/packages/com.github.metacubex.clash.meta/",
+                            "buttonText": {
+                                "en": "Open in F-Droid",
+                                "ru": "Открыть F-Droid"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the APK file.",
+                        "ru": "Скачайте и установите APK-файл."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Tap the button to import your configuration.",
+                        "ru": "Нажмите кнопку для импорта конфигурации."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Open Clash Meta and tap Connect.",
+                        "ru": "Откройте Clash Meta и нажмите «Подключить»."
+                    }
+                }
+            }
+        ],
+        "macos": [
+            {
+                "id": "hiddify",
+                "name": "Hiddify",
+                "isFeatured": true,
+                "urlScheme": "hiddify://import/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-MacOS.dmg",
+                            "buttonText": {
+                                "en": "Download for macOS",
+                                "ru": "Скачать для macOS"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the application.",
+                        "ru": "Скачайте и установите приложение."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a different server in the Proxy section if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите другой сервер в разделе «Прокси»."
+                    }
+                }
+            },
+            {
+                "id": "v2rayn",
+                "name": "v2rayN",
+                "isFeatured": false,
+                "urlScheme": "v2rayn://install-config/?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-macos-64.dmg",
+                            "buttonText": {
+                                "en": "Intel",
+                                "ru": "Intel"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-macos-arm64.dmg",
+                            "buttonText": {
+                                "en": "Apple Silicon",
+                                "ru": "Apple Silicon"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Choose your Mac processor type and install the application.",
+                        "ru": "Выберите версию для вашего Mac и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "You can change the language by clicking the three dots in the top right corner.",
+                        "ru": "Язык можно сменить, нажав на три точки в правом верхнем углу."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription (NOT SUPPORTED FOR THIS APPLICATION).",
+                        "ru": "Нажмите кнопку для добавления подписки (НЕ ПОДДЕРЖИВАЕТСЯ ДЛЯ ДАННОГО ПРИЛОЖЕНИЯ)."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In v2rayN, open Configuration → Import Config, then go to Subscription Groups and update them.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В v2rayN откройте Конфигурация → Импортировать конфиг, затем перейдите в Группы подписок и обновите их."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Enable VPN with the Enable TUN button. Turn TUN mode ON and select Clear System Proxy from the list on the right.",
+                        "ru": "Включите VPN кнопкой «Включить TUN». Переключите режим TUN в положение ON и выберите «Отключить системный прокси» в списке справа."
+                    }
+                }
+            },
+            {
+                "id": "clash-verge",
+                "name": "Clash Verge",
+                "isFeatured": false,
+                "urlScheme": "clash://install-config?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_x64.dmg",
+                            "buttonText": {
+                                "en": "Intel",
+                                "ru": "Intel"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_aarch64.dmg",
+                            "buttonText": {
+                                "en": "Apple Silicon",
+                                "ru": "Apple Silicon"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Choose your Mac processor type and install the application.",
+                        "ru": "Выберите версию для вашего Mac и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "To change the language, click the gear icon in the left panel, go to Verge 设置 and select 语言设置.",
+                        "ru": "Чтобы сменить язык, нажмите на шестерёнку в левой панели, перейдите в Verge 设置 и выберите 语言设置."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In Clash Verge, go to Profiles, paste the link in the text field, and click Import.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В Clash Verge перейдите в раздел «Профили», вставьте ссылку и нажмите «Импорт»."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Select a server in the Proxy section. Enable VPN in Settings by turning TUN Mode ON.",
+                        "ru": "Выберите сервер в разделе «Прокси». Включите VPN в настройках, переключив TUN Mode в положение «ВКЛ»."
+                    }
+                }
+            }
+        ],
+        "linux": [
+            {
+                "id": "v2rayn",
+                "name": "v2rayN",
+                "isFeatured": true,
+                "urlScheme": "v2rayn://install-config/?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-linux-64.zip",
+                            "buttonText": {
+                                "en": "ZIP",
+                                "ru": "ZIP"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-linux-64.deb",
+                            "buttonText": {
+                                "en": "DEB",
+                                "ru": "DEB"
+                            }
+                        },
+                        {
+                            "buttonLink": "https://github.com/2dust/v2rayN/releases/download/7.16.4/v2rayN-linux-rhel-64.rpm",
+                            "buttonText": {
+                                "en": "RPM",
+                                "ru": "RPM"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Choose the format for your Linux distribution and install the application.",
+                        "ru": "Выберите формат для вашего дистрибутива Linux и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "You can change the language by clicking the three dots in the top right corner.",
+                        "ru": "Язык можно сменить, нажав на три точки в правом верхнем углу."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription (NOT SUPPORTED FOR THIS APPLICATION).",
+                        "ru": "Нажмите кнопку для добавления подписки (НЕ ПОДДЕРЖИВАЕТСЯ ДЛЯ ДАННОГО ПРИЛОЖЕНИЯ)."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In v2rayN, open Configuration → Import Config, then go to Subscription Groups and update them.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В v2rayN откройте Конфигурация → Импортировать конфиг, затем перейдите в Группы подписок и обновите их."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Enable VPN with the Enable TUN button. Turn TUN mode ON and select Clear System Proxy from the list on the right.",
+                        "ru": "Включите VPN кнопкой «Включить TUN». Переключите режим TUN в положение ON и выберите «Отключить системный прокси» в списке справа."
+                    }
+                }
+            },
+            {
+                "id": "hiddify",
+                "name": "Hiddify",
+                "isFeatured": false,
+                "urlScheme": "hiddify://import/",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Linux-x64.AppImage",
+                            "buttonText": {
+                                "en": "Download AppImage",
+                                "ru": "Скачать AppImage"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Download and install the application.",
+                        "ru": "Скачайте и установите приложение."
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Tap the power button in the center to connect. Select a different server in the Proxy section if needed.",
+                        "ru": "Нажмите кнопку питания в центре для подключения. При необходимости выберите другой сервер в разделе «Прокси»."
+                    }
+                }
+            },
+            {
+                "id": "clash-verge",
+                "name": "Clash Verge",
+                "isFeatured": false,
+                "urlScheme": "clash://install-config?url=",
+                "installationStep": {
+                    "buttons": [
+                        {
+                            "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases",
+                            "buttonText": {
+                                "en": "Download for Linux",
+                                "ru": "Скачать для Linux"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en": "Choose the format for your Linux distribution and install the application.",
+                        "ru": "Выберите формат для вашего дистрибутива Linux и установите приложение."
+                    }
+                },
+                "additionalBeforeAddSubscriptionStep": {
+                    "buttons": [],
+                    "description": {
+                        "en": "To change the language, click the gear icon in the left panel, go to Verge 设置 and select 语言设置.",
+                        "ru": "Чтобы сменить язык, нажмите на шестерёнку в левой панели, перейдите в Verge 设置 и выберите 语言设置."
+                    },
+                    "title": {
+                        "en": "Change language",
+                        "ru": "Смена языка"
+                    }
+                },
+                "addSubscriptionStep": {
+                    "description": {
+                        "en": "Click the button below to add your subscription.",
+                        "ru": "Нажмите кнопку для добавления подписки."
+                    }
+                },
+                "additionalAfterAddSubscriptionStep": {
+                    "buttons": [],
+                    "title": {
+                        "en": "If subscription wasn't added",
+                        "ru": "Если подписка не добавилась"
+                    },
+                    "description": {
+                        "en": "If nothing happens, add it manually: click Get Link at the top right of this page and copy the link. In Clash Verge, go to Profiles, paste the link in the text field, and click Import.",
+                        "ru": "Если ничего не произошло, добавьте вручную: нажмите «Получить ссылку» вверху страницы и скопируйте её. В Clash Verge перейдите в раздел «Профили», вставьте ссылку и нажмите «Импорт»."
+                    }
+                },
+                "connectAndUseStep": {
+                    "description": {
+                        "en": "Select a server in the Proxy section. Enable VPN in Settings by turning TUN Mode ON.",
+                        "ru": "Выберите сервер в разделе «Прокси». Включите VPN в настройках, переключив TUN Mode в положение «ВКЛ»."
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+services:
+  anubis:
+    image: ghcr.io/techarohq/anubis:latest
+    environment:
+      BIND: "/run/anubis/instance.sock"
+      BIND_NETWORK: "unix"
+      SOCKET_MODE: "0666" # You can remove it and add permissions manually for users
+      DIFFICULTY: "4"
+      SERVE_ROBOTS_TXT: "true"
+      TARGET: "unix:///run/nginx/nginx.sock"
+    volumes:
+      - /run/anubis:/run/anubis
+      - /run/nginx:/run/nginx
+    healthcheck:
+      test: ["CMD", "anubis", "--healthcheck"]
+      interval: 5s
+      timeout: 30s
+      retries: 5
+      start_period: 500ms
+    logging:
+      options:
+        max-size: "50m"
+    restart: unless-stopped
