@@ -1,0 +1,15 @@
+services:
+  remnanode:
+    container_name: remnanode
+    hostname: remnanode
+    image: remnawave/node:latest
+    network_mode: host
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - NODE_PORT=${NODE_PORT:-2222}
+      - SECRET_KEY=${SECRET_KEY}
+    volumes:
+      - /etc/letsencrypt/live/{{DOMAIN}}/fullchain.pem:/etc/letsencrypt/live/{{DOMAIN}}/fullchain.pem:ro
+      - /etc/letsencrypt/live/{{DOMAIN}}/privkey.pem:/etc/letsencrypt/live/{{DOMAIN}}/privkey.pem:ro
