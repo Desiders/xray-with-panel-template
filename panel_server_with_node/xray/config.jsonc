@@ -31,13 +31,13 @@
         "clients": [],
         "fallbacks": [
           {
-            "dest": 4002,
-            "path": "/{{SHADOWSOCKS_TCP_PATH}}" // Change it to custom path. Don't forget to change it below.
-          },
-          {
             "dest": "/dev/shm/subscription.sock",
             "name": "{{SUBSCRIPTION_DOMAIN}}",
             "xver": 2
+          },
+          {
+            "dest": 4001,
+            "name": "{{DOMAIN}}"
           },
           {
             "alpn": "h2",
@@ -82,8 +82,7 @@
     },
     {
       "tag": "Shadowsocks-TCP",
-      "port": 4002,
-      "listen": "127.0.0.1",
+      "port": 4001,
       "protocol": "shadowsocks",
       "settings": {
         "clients": []
@@ -97,17 +96,7 @@
       },
       "streamSettings": {
         "network": "raw",
-        "security": "none",
-        "rawSettings": {
-          "header": {
-            "type": "http",
-            "request": {
-              "path": [
-                "/{{SHADOWSOCKS_TCP_PATH}}"
-              ]
-            }
-          }
-        }
+        "security": "none"
       }
     }
   ],
