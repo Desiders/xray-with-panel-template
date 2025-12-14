@@ -35,6 +35,11 @@
             "path": "/{{SHADOWSOCKS_TCP_PATH}}" // Change it to custom path. Don't forget to change it below.
           },
           {
+            "dest": "/dev/shm/subscription.sock",
+            "name": "{{SUBSCRIPTION_DOMAIN}}",
+            "xver": 2
+          },
+          {
             "alpn": "h2",
             "dest": "/dev/shm/h2.sock",
             "xver": 2
@@ -66,6 +71,10 @@
             {
               "keyFile": "/etc/letsencrypt/live/{{DOMAIN}}/privkey.pem",
               "certificateFile": "/etc/letsencrypt/live/{{DOMAIN}}/fullchain.pem"
+            },
+            {
+              "keyFile": "/etc/letsencrypt/live/{{SUBSCRIPTION_DOMAIN}}/privkey.pem",
+              "certificateFile": "/etc/letsencrypt/live/{{SUBSCRIPTION_DOMAIN}}/fullchain.pem"
             }
           ]
         }

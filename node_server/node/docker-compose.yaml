@@ -11,5 +11,10 @@ services:
       - NODE_PORT=${NODE_PORT:-2222}
       - SECRET_KEY=${SECRET_KEY}
     volumes:
-      - /etc/letsencrypt/live/{{DOMAIN}}/fullchain.pem:/etc/letsencrypt/live/{{DOMAIN}}/fullchain.pem:ro
-      - /etc/letsencrypt/live/{{DOMAIN}}/privkey.pem:/etc/letsencrypt/live/{{DOMAIN}}/privkey.pem:ro
+      - type: bind
+        source: /etc/letsencrypt
+        target: /etc/letsencrypt
+        read_only: true
+        bind:
+          propagation: rslave
+      - /run/nginx:/dev/shm:rw
