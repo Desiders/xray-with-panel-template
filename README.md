@@ -2,9 +2,7 @@
 
 This repository provides a template for deploying a Remnawave Panel with XRay, with different deployment scenarios.
 
-## Directory Structure
-
-The repository is divided into three main directories, each representing a different deployment model:
+## Structure
 
 ### 1. `node_server/`
 
