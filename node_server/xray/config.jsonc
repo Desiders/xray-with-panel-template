@@ -32,7 +32,7 @@
         "fallbacks": [
           {
             "dest": 4001,
-            "name": "{{DOMAIN}}"
+            "path": "/{{SHADOWSOCKS_PATH}}"
           },
           {
             "alpn": "h2",
@@ -74,6 +74,7 @@
     {
       "tag": "Shadowsocks-TCP",
       "port": 4001,
+      "listen": "127.0.0.1",
       "protocol": "shadowsocks",
       "settings": {
         "clients": []
@@ -87,7 +88,17 @@
       },
       "streamSettings": {
         "network": "raw",
-        "security": "none"
+        "security": "none",
+        "rawSettings": {
+          "header": {
+            "type": "http",
+            "request": {
+              "path": [
+                "/{{SHADOWSOCKS_PATH}}"
+              ]
+            }
+          }
+        }
       }
     }
   ],
