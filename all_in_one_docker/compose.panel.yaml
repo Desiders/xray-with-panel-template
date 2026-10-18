@@ -72,12 +72,21 @@ services:
     container_name: remnawave-subscription-page
     hostname: remnawave-subscription-page
     restart: always
-    env_file:
-        - .env
+    environment:
+      APP_PORT: "3010"
+      REMNAWAVE_PANEL_URL: "http://remnawave:3000"
+      META_TITLE: "Page"
+      META_DESCRIPTION: "Subscription"
+      CUSTOM_SUB_PREFIX: "profile"
     volumes:
         - ./app-config.json:/opt/app/frontend/assets/app-config.json
     ports:
         - '127.0.0.1:3010:3010'
+
+    depends_on:
+      remnawave:
+        condition: service_healthy
+
     networks:
         - remnawave-network
 
