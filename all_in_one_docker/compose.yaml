@@ -1,0 +1,109 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.user
+    container_name: nginx
+    network_mode: host
+    restart: unless-stopped
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/snippets:/etc/nginx/snippets:ro
+      - ./www:/var/www:ro
+      - nginx_sockets:/run/nginx
+      - anubis_sockets:/run/anubis
+      - ./nginx/10-clean-sockets.sh:/docker-entrypoint.d/10-clean-sockets.sh:ro
+
+    healthcheck:
+        test: ["CMD", "nginx", "-t", "-q"]
+        interval: 5s
+        timeout: 3s
+        retries: 10
+        start_period: 5s
+
+    logging:
+      options:
+        max-size: "100m"
+
+  anubis:
+    image: ghcr.io/techarohq/anubis:latest
+    container_name: anubis
+    user: "1000:1000"
+    restart: unless-stopped
+
+    depends_on:
+      nginx:
+        condition: service_healthy
+
+    env_file:
+        - .env
+
+    environment:
+      BIND: /run/anubis/instance.sock
+      BIND_NETWORK: unix
+      SOCKET_MODE: "0600"
+      DIFFICULTY: "4"
+      SERVE_ROBOTS_TXT: "true"
+      TARGET: unix:///run/nginx/camouflage.sock
+      POLICY_FNAME: /etc/anubis/botPolicies.yaml
+      ED25519_PRIVATE_KEY_HEX: ${ANUBIS_ED25519_PRIVATE_KEY_HEX:?Required}
+
+    volumes:
+      - anubis_sockets:/run/anubis
+      - nginx_sockets:/run/nginx:ro
+      - ./anubis/botPolicies.yaml:/etc/anubis/botPolicies.yaml:ro
+
+    healthcheck:
+      test: ["CMD", "anubis", "--healthcheck"]
+      interval: 5s
+      timeout: 30s
+      retries: 5
+      start_period: 500ms
+
+    logging:
+      options:
+        max-size: "50m"
+
+  remnanode:
+    image: remnawave/node:2.2.3
+    container_name: remnanode
+    hostname: remnanode
+    network_mode: host
+    restart: always
+
+    depends_on:
+      nginx:
+        condition: service_healthy
+      anubis:
+        condition: service_healthy
+
+    env_file:
+      - .env
+
+    environment:
+      NODE_PORT: ${NODE_PORT:-2223}
+      SECRET_KEY: ${SECRET_KEY:?Required}
+
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      # - ./geosite/geosite-example.dat:/usr/local/bin/geosite-example.dat
+      - nginx_sockets:/dev/shm
+
+    logging:
+      options:
+        max-size: "100m"
+
+volumes:
+  nginx_sockets:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+
+  anubis_sockets:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs

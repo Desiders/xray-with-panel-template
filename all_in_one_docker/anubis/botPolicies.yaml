@@ -1,0 +1,6 @@
+bots:
+#   - name: allow-webhook
+#     path_regex: ^//push$
+#     action: ALLOW
+
+  - import: (data)/meta/default-config.yaml

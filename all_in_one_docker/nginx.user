@@ -1,0 +1,4 @@
+FROM nginx:stable-alpine
+
+RUN addgroup -g 1000 user \
+    && adduser -D -H -u 1000 -G user user
